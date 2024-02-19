@@ -6,8 +6,5 @@ import com.example.samuraitravel.entity.House;
 
 public interface HouseRepository  extends JpaRepository<House,Integer>{
 	
-	
-	
-	
 
 }
