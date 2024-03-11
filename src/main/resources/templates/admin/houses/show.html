@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns:th="https://www.thymeleaf.org">
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head>
 	<div th:replace="~{fragment :: meta}"></div>
@@ -56,7 +56,7 @@
 
 							<div>
 
-								 <a th:href="@{/admin/houses/__${house.getId()}__/edit}">編集</a> 
+								<a th:href="@{/admin/houses/__${house.getId()}__/edit}">編集</a>
 
 							</div>
 

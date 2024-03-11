@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns:th="https://www.thymeleaf.org">
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head>
 
@@ -77,7 +77,8 @@
 
 						<div class="text-center">
 
-							<a href="#">
+						<a th:href="@{/signup}">
+
 
 								会員登録
 

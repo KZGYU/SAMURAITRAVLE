@@ -4,8 +4,6 @@
 
 <head>
 
-
-
 	<div th:replace="~{fragment :: meta}"></div>
 
 
@@ -14,13 +12,11 @@
 
 
 
-	<title>SAMURAI Travel</title>
+	<title>メール認証</title>
 
 </head>
 
 <body>
-
-
 
 	<div class="samuraitravel-wrapper">
 
@@ -34,25 +30,29 @@
 
 			<div class="container pt-4 pb-5 samuraitravel-container">
 
-				<div th:if="${param.loggedIn}" class="alert alert-info">
+				<div class="row justify-content-center">
 
-					ログインしました。
-
-				</div>
+					<div class="col-xl-5 col-lg-6 col-md-8">
 
 
 
-				<div th:if="${param.loggedOut}" class="alert alert-info">
+						<div th:if="${successMessage}" class="alert alert-info">
 
-					ログアウトしました。
+							<span th:text="${successMessage}"></span>
 
-				</div>
+						</div>
 
 
 
-				<div th:if="${successMessage}" class="alert alert-info">
+						<div th:if="${errorMessage}" class="alert alert-danger">
 
-					<span th:text="${successMessage}"></span>
+							<span th:text="${errorMessage}"></span>
+
+						</div>
+
+
+
+					</div>
 
 				</div>
 
