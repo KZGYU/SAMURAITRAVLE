@@ -48,7 +48,6 @@
 </head>
 
 <body>
-
 	<!-- ヘッダーの部品化 -->
 
 	<div th:fragment="header" th:remove="tag">
@@ -62,6 +61,8 @@
 					<img class="samuraitravel-logo me-1" th:src="@{/images/logo.png}" alt="SAMURAI Travel">
 
 				</a>
+
+
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -84,6 +85,7 @@
 							<a class="nav-link" th:href="@{/login}">ログイン</a>
 
 						</li>
+
 						<li class="nav-item" sec:authorize="isAnonymous()">
 
 							<a class="nav-link" th:href="@{/signup}">会員登録</a>
@@ -106,6 +108,14 @@
 
 
 							<div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownGeneral">
+
+								<a class="dropdown-item samuraitravel-dropdown-item" th:href="@{/user}">会員情報</a>
+
+
+
+								<div class="dropdown-divider"></div>
+
+
 
 								<a class="dropdown-item samuraitravel-dropdown-item" th:href="@{/logout}"
 									onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -136,6 +146,7 @@
 
 
 							<div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownAdmin">
+								<a class="dropdown-item samuraitravel-dropdown-item" th:href="@{/admin/users}">会員一覧</a>
 
 								<a class="dropdown-item samuraitravel-dropdown-item" th:href="@{/admin/houses}">民宿一覧</a>
 
@@ -162,10 +173,11 @@
 
 				</div>
 
+			</div>
+
 		</nav>
 
 	</div>
-
 
 
 
@@ -201,5 +213,7 @@
 	</div>
 
 </body>
+
+</html>
 
 </html>
